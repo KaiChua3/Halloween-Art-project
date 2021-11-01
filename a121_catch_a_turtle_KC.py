@@ -22,12 +22,14 @@ def painter_clicked(x,y):
 def change_position():
     new_xpos = rand.randint(-400,400)
     new_ypos = rand.randint(-300,300)
-    painter.penup() 
+    painter.penup()
     painter.goto(new_xpos,new_ypos)
 def halloween_picture(x):
-    x = rand.randint(0,2)
+    x = rand.randint(0,3)
     print(list[x])
 #-----events----------------
 wn = trtl.Screen()
+wn.addshape('ezgif.gif')
+wn.bgpic('ezgif.gif')
 painter.onclick(painter_clicked)
 wn.mainloop()
